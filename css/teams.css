@@ -1,0 +1,231 @@
+/* Part 1: Media Queries (teams.html)
+   This page does not use Bootstrap, only this CSS file.
+
+   Screen sizes:
+   Mobile  - less than 768px (normal styles, no media query)
+   Tablet  - from 768px  -> @media (min-width: 768px)
+   Desktop - from 992px  -> @media (min-width: 992px) */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #222222;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: #d00000;
+}
+
+/* Header and footer (same as on our other pages) */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #000000;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.site-nav a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: #ff5d5d;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.site-footer {
+  padding: 16px;
+  background: #222222;
+  color: #ffffff;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ===== Task 1: Responsive typography ===== */
+
+/* Mobile: small text */
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 15px;
+}
+
+/* Tablet: medium text */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Desktop: big text */
+@media (min-width: 992px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+/* ===== Task 2: Card group ===== */
+
+/* Mobile: cards one under another */
+.team-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Tablet: 2 cards in a row */
+@media (min-width: 768px) {
+  .team-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop: 3 cards in a row */
+@media (min-width: 992px) {
+  .team-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.team-card {
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  transition: transform 0.2s;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.team-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.team-card-body {
+  padding: 18px;
+}
+
+.team-card-body h3 {
+  margin-top: 0;
+}
+
+.team-link {
+  color: #d00000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.team-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== "Current layout" text ===== */
+.screen-size {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #222222;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* Mobile: show only "Mobile" */
+.tablet-text,
+.desktop-text {
+  display: none;
+}
+
+/* Tablet: show only "Tablet" */
+@media (min-width: 768px) {
+  .mobile-text {
+    display: none;
+  }
+
+  .tablet-text {
+    display: inline;
+  }
+}
+
+/* Desktop: show only "Desktop" */
+@media (min-width: 992px) {
+  .tablet-text {
+    display: none;
+  }
+
+  .desktop-text {
+    display: inline;
+  }
+}

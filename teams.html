@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Part 1: Media Queries. This page does not use Bootstrap -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Teams | F1 Racing</title>
+  <link rel="stylesheet" href="css/teams.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">F1 RACING</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#drivers">Drivers</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="teams.html" class="active">Teams</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <!-- This text changes with media queries -->
+    <p class="screen-size">Current layout:
+      <b class="mobile-text">Mobile</b>
+      <b class="tablet-text">Tablet</b>
+      <b class="desktop-text">Desktop</b>
+    </p>
+
+    <!-- Task 1: Responsive typography -->
+    <section>
+      <h1>Formula 1 teams</h1>
+      <p>In Formula 1 every team builds its own car. A team has two race drivers and hundreds of engineers, mechanics and strategists who work together to make the car fast and reliable.</p>
+
+      <h2>What a team does</h2>
+      <p>Before the season the team designs the car in its factory. During a race weekend the mechanics prepare the car, the engineers study the data and the strategists decide when the drivers should stop for new tyres.</p>
+
+      <h3>Two championships</h3>
+      <p>Each season has two titles. The Drivers' Championship is for the best driver, and the Constructors' Championship is for the best team. The points of both team drivers are added together for the team.</p>
+    </section>
+
+    <!-- Task 2: Card group (3 cards) -->
+    <section>
+      <h2>Teams of our drivers</h2>
+      <div class="team-cards">
+        <article class="team-card">
+          <img src="images/Max2.jpg" alt="Max Verstappen in his Red Bull Racing suit">
+          <div class="team-card-body">
+            <h3>Red Bull Racing</h3>
+            <p>An Austrian team based in Milton Keynes, England. It joined Formula 1 in 2005 and won many titles with Sebastian Vettel and Max Verstappen.</p>
+            <a class="team-link" href="verstappen.html">Driver: Max Verstappen</a>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="images/Kimi3.jpg" alt="Kimi Antonelli in his Mercedes race suit">
+          <div class="team-card-body">
+            <h3>Mercedes-AMG Petronas</h3>
+            <p>A German team based in Brackley, England. It won eight Constructors' Championships in a row, from 2014 to 2021.</p>
+            <a class="team-link" href="kimi.html">Driver: Kimi Antonelli</a>
+          </div>
+        </article>
+        <article class="team-card">
+          <img src="images/Michael3.jpg" alt="Michael Schumacher driving a Ferrari">
+          <div class="team-card-body">
+            <h3>Scuderia Ferrari</h3>
+            <p>The oldest and most famous team in Formula 1. Ferrari has raced in every World Championship season since 1950.</p>
+            <a class="team-link" href="shumakher.html">Legend: Michael Schumacher</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Team members: Dinmukhamed and Asylzhan</p>
+  </footer>
+</body>
+</html>
