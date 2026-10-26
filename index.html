@@ -13,7 +13,6 @@
 </head>
 <body>
 
-  <!-- Task 5: Bootstrap navbar -->
   <header>
     <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
       <div class="container-fluid px-4">
@@ -22,43 +21,31 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto main-nav">
             <li class="nav-item"><a class="nav-link fw-bold active" aria-current="page" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link fw-bold" href="index.html#drivers">Drivers</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link fw-bold" href="teams.html">Teams</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="index.html#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="fan-zone.html">Fan zone</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Task 3: Bootstrap grid - sidebar (3 columns) + main content (9 columns) -->
   <div class="container-fluid">
     <div class="row">
 
-      <aside class="col-lg-3 sidebar p-4">
-        <h2 class="fs-5">Quick links</h2>
-        <div class="list-group">
-          <a href="verstappen.html" class="list-group-item list-group-item-action">Max Verstappen</a>
-          <a href="kimi.html" class="list-group-item list-group-item-action">Kimi Antonelli</a>
-          <a href="shumakher.html" class="list-group-item list-group-item-action">Michael Schumacher</a>
-          <a href="gallery.html" class="list-group-item list-group-item-action">Gallery</a>
-          <a href="index.html#race-weekend" class="list-group-item list-group-item-action">Race weekend</a>
-        </div>
-      </aside>
+      <main class="col-12 site-main py-4 px-3 px-lg-5">
 
-      <main class="col-lg-9 py-4 px-3 px-lg-5">
-
-        <!-- Task 3: section with two columns (col-lg-6) -->
         <section class="hero p-4 mb-5">
           <div class="row g-4 align-items-center">
             <div class="col-lg-6">
               <p class="eyebrow mb-1">Formula 1</p>
               <h1>Welcome to Formula&nbsp;1</h1>
               <p class="lead">Formula 1 is a popular car racing sport. Drivers race very fast cars on tracks around the world.</p>
-              <!-- Task 6: Bootstrap buttons -->
+
               <div class="mt-3 mt-lg-4">
                 <a href="#drivers" class="btn btn-danger btn-lg me-2 mb-2">Meet the drivers</a>
                 <a href="gallery.html" class="btn btn-outline-dark btn-lg mb-2">Open gallery</a>
@@ -70,7 +57,6 @@
           </div>
         </section>
 
-        <!-- Task 8: Bootstrap cards in a card-group -->
         <section id="drivers" class="mb-5">
           <p class="eyebrow mb-1">Drivers</p>
           <h2 class="mb-3">Formula 1 stars</h2>
@@ -102,7 +88,6 @@
           </div>
         </section>
 
-        <!-- Task 3: section with three columns (col-lg-4) -->
         <section id="race-weekend" class="mb-5">
           <h2 class="mb-3">Race weekend</h2>
           <div class="row g-3 mb-4">
@@ -139,155 +124,32 @@
           </table>
         </section>
 
-        <section class="card mb-5">
-          <div class="card-body p-4">
-            <h2>About team members</h2>
-            <p>Our team has two students. We chose Formula 1 because we like cars and racing.</p>
-            <ul class="mb-0">
-              <li>Dinmukhamed Tamdybek: Home page and Max Verstappen page.</li>
-              <li>Asylzhan Abdukadirov: Kimi Antonelli and Michael Schumacher pages.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Task 9: form with Bootstrap classes -->
-        <section id="contact" class="card">
-          <div class="card-body p-4">
-            <h2 class="mb-3">Contact form</h2>
-            <form action="#contact" method="get" class="px-sm-2">
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <div class="input-group">
-                    <span class="input-group-text">@</span>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="colour" class="form-label">Favourite team colour</label>
-                <select class="form-select" id="colour" name="colour" required>
-                  <option value="">Choose one</option>
-                  <option value="red">Red</option>
-                  <option value="blue">Blue</option>
-                  <option value="silver">Silver</option>
-                </select>
-              </div>
-
-              <div class="mb-3">
-                <p class="mb-1">Favourite driver</p>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="driver" id="driverMax" value="max" checked>
-                  <label class="form-check-label" for="driverMax">Max</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="driver" id="driverKimi" value="kimi">
-                  <label class="form-check-label" for="driverKimi">Kimi</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="driver" id="driverMichael" value="michael">
-                  <label class="form-check-label" for="driverMichael">Michael</label>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-danger">Send</button>
-              <button type="reset" class="btn btn-secondary">Clear</button>
-            </form>
-          </div>
-        </section>
-
-        <!-- Assignment 4: simple JavaScript examples -->
-        <section id="javascript-tasks" class="mt-5">
-          <div class="card mb-4">
-            <div class="card-body p-4">
-              <h3 class="h4">Create an account</h3>
-              <form id="signup-form" novalidate>
-                <div class="mb-3">
-                  <label for="signup-name" class="form-label">Name</label>
-                  <input id="signup-name" class="form-control" type="text">
-                  <small id="name-error" class="form-error"></small>
-                </div>
-                <div class="mb-3">
-                  <label for="signup-email" class="form-label">Email</label>
-                  <input id="signup-email" class="form-control" type="email">
-                  <small id="email-error" class="form-error"></small>
-                </div>
-                <div class="mb-3">
-                  <label for="signup-password" class="form-label">Password (at least 8 characters)</label>
-                  <input id="signup-password" class="form-control" type="password">
-                  <small id="password-error" class="form-error"></small>
-                </div>
-                <div class="mb-3">
-                  <label for="signup-confirm" class="form-label">Confirm password</label>
-                  <input id="signup-confirm" class="form-control" type="password">
-                  <small id="confirm-error" class="form-error"></small>
-                </div>
-                <button class="btn btn-danger" type="submit">Sign up</button>
-                <p id="signup-result" class="mt-3 mb-0" aria-live="polite"></p>
-              </form>
-            </div>
-          </div>
-
-          <div class="card mb-4">
-            <div class="card-body p-4">
-              <h3 class="h4">Frequently asked questions</h3>
-              <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false">What happens during practice?</button>
-                <div class="faq-answer" hidden><p>Drivers learn the track and teams test their cars.</p></div>
-              </div>
-              <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false">What is qualifying?</button>
-                <div class="faq-answer" hidden><p>Drivers set lap times to decide the starting order.</p></div>
-              </div>
-              <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false">When is the race?</button>
-                <div class="faq-answer" hidden><p>The main race is usually on Sunday.</p></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mb-4">
-            <div class="card-body p-4">
-              <h3 class="h4">Page controls</h3>
-              <button id="color-button" class="btn btn-outline-danger me-2 mb-2" type="button">Change background color</button>
-              <button id="subscribe-button" class="btn btn-danger mb-2" type="button">Subscribe</button>
-              <p class="mb-0 mt-2">Current date and time: <span id="current-time"></span></p>
-            </div>
+        <section class="mb-4" aria-labelledby="explore-heading">
+          <h2 id="explore-heading" class="mb-3">Explore the site</h2>
+          <div class="row g-3">
+            <div class="col-md-4"><div class="card h-100"><div class="card-body">
+              <h3 class="h5">Teams</h3><p>Meet the people behind the cars.</p>
+              <a href="teams.html" class="btn btn-outline-danger">See teams</a>
+            </div></div></div>
+            <div class="col-md-4"><div class="card h-100"><div class="card-body">
+              <h3 class="h5">Fan zone</h3><p>Explore a race weekend and try the race lights.</p>
+              <a href="fan-zone.html" class="btn btn-outline-danger">Open Fan zone</a>
+            </div></div></div>
+            <div class="col-md-4"><div class="card h-100"><div class="card-body">
+              <h3 class="h5">Contact</h3><p>Find forms, subscription and common questions.</p>
+              <a href="contact.html" class="btn btn-outline-danger">Get in touch</a>
+            </div></div></div>
           </div>
         </section>
 
       </main>
     </div>
   </div>
-
-  <div id="subscribe-popup" class="popup-overlay" hidden>
-    <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popup-title">
-      <button id="close-popup" class="popup-close" type="button" aria-label="Close">&times;</button>
-      <h2 id="popup-title" class="h4">Subscribe to F1 updates</h2>
-      <form id="subscribe-form">
-        <label for="subscribe-email" class="form-label">Email</label>
-        <input id="subscribe-email" class="form-control mb-3" type="email" required>
-        <button class="btn btn-danger" type="submit">Subscribe</button>
-      </form>
-      <p id="subscribe-result" class="mt-3 mb-0" aria-live="polite"></p>
-    </div>
-  </div>
-
   <footer class="bg-dark text-white text-center py-3">
     <p class="mb-0">Team members: Dinmukhamed Tamdybek and Asylzhan Abdukadirov</p>
   </footer>
 
-  <!-- Bootstrap JS (for the navbar button and the carousel) -->
+  <!-- Bootstrap JavaScript for the mobile navigation -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>

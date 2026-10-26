@@ -1,4 +1,4 @@
-// Assignment 4: basic JavaScript practice.
+// Shared interactions used across the site.
 
 const signupForm = document.getElementById('signup-form');
 
@@ -115,3 +115,28 @@ if (currentTime) {
   showTime();
   setInterval(showTime, 1000);
 }
+
+// Use left and right arrow keys to move through the main navigation.
+document.querySelectorAll('.main-nav').forEach(function (nav) {
+  const links = Array.from(nav.querySelectorAll('a'));
+
+  nav.addEventListener('keydown', function (event) {
+    const currentIndex = links.indexOf(document.activeElement);
+    if (currentIndex === -1) return;
+
+    let nextIndex;
+    switch (event.key) {
+      case 'ArrowRight':
+        nextIndex = (currentIndex + 1) % links.length;
+        break;
+      case 'ArrowLeft':
+        nextIndex = (currentIndex - 1 + links.length) % links.length;
+        break;
+      default:
+        return;
+    }
+
+    event.preventDefault();
+    links[nextIndex].focus();
+  });
+});
