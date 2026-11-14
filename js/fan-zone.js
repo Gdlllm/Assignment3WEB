@@ -111,19 +111,3 @@ if (raceButton) {
     }, 1300);
   });
 }
-
-const themeButton = document.getElementById('theme-button');
-if (themeButton) {
-  themeButton.addEventListener('click', function () {
-    const night = document.body.classList.toggle('night-mode');
-    document.body.style.backgroundColor = '';
-    themeButton.textContent = night ? 'Day mode' : 'Night mode';
-    themeButton.setAttribute('aria-pressed', night);
-  });
-
-  document.getElementById('color-button').addEventListener('click', function () {
-    document.body.classList.remove('night-mode');
-    themeButton.textContent = 'Night mode';
-    themeButton.setAttribute('aria-pressed', 'false');
-  });
-}

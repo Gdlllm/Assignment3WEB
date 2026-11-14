@@ -1,160 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="data:,">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | F1 Racing</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark" aria-label="Main navigation">
-      <div class="container-fluid px-4">
-        <a class="navbar-brand fw-bold" href="index.html">F1 RACING</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto main-nav">
-            <li class="nav-item"><a class="nav-link fw-bold" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="index.html#drivers">Drivers</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="teams.html">Teams</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="fan-zone.html">Fan zone</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold active" aria-current="page" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main class="site-main py-4 px-3 px-lg-5">
-    <section class="hero p-4 mb-4">
-      <p class="eyebrow mb-1">Community</p>
-      <h1>Contact and questions</h1>
-      <p class="lead mb-0">Try the message form, explore common questions or subscribe for F1 updates.</p>
-    </section>
-
-    <section id="contact" class="card mb-4" aria-labelledby="message-heading">
-      <div class="card-body p-4">
-        <h2 id="message-heading">Message form</h2>
-        <p>Fill in two short steps. This demo checks your answers but does not send a message.</p>
-        <form id="message-form" novalidate>
-          <div class="form-step" data-step="0">
-            <h3 class="h5">Your details</h3>
-            <div class="row g-3 mb-3">
-              <div class="col-md-6">
-                <label for="contact-name" class="form-label">Name</label>
-                <input id="contact-name" class="form-control" type="text" required>
-              </div>
-              <div class="col-md-6">
-                <label for="contact-email" class="form-label">Email</label>
-                <input id="contact-email" class="form-control" type="email" required>
-              </div>
-            </div>
-            <button id="message-next" class="btn btn-danger" type="button">Next</button>
-          </div>
-          <div class="form-step" data-step="1" hidden>
-            <h3 class="h5">Your message</h3>
-            <div class="mb-3">
-              <label for="contact-colour" class="form-label">Favourite team colour</label>
-              <select id="contact-colour" class="form-select" required>
-                <option value="">Choose one</option>
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="silver">Silver</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="contact-message" class="form-label">Message</label>
-              <textarea id="contact-message" class="form-control" rows="4" required></textarea>
-            </div>
-            <button id="message-back" class="btn btn-outline-dark me-2" type="button">Back</button>
-            <button class="btn btn-danger" type="submit">Finish</button>
-          </div>
-          <p id="message-result" class="mt-3 mb-0" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-    <section class="card mb-4" aria-labelledby="account-heading">
-          <div class="card-body p-4">
-            <h2 id="account-heading">Create an account</h2>
-            <p>Practice checking a form before it is submitted. No account is saved.</p>
-            <form id="signup-form" class="form-narrow" novalidate>
-              <div class="mb-3">
-                <label for="signup-name" class="form-label">Name</label>
-                <input id="signup-name" class="form-control" type="text" autocomplete="name">
-                <small id="name-error" class="form-error"></small>
-              </div>
-              <div class="mb-3">
-                <label for="signup-email" class="form-label">Email</label>
-                <input id="signup-email" class="form-control" type="email" autocomplete="email">
-                <small id="email-error" class="form-error"></small>
-              </div>
-              <div class="mb-3">
-                <label for="signup-password" class="form-label">Password (at least 8 characters)</label>
-                <input id="signup-password" class="form-control" type="password" autocomplete="new-password">
-                <small id="password-error" class="form-error"></small>
-              </div>
-              <div class="mb-3">
-                <label for="signup-confirm" class="form-label">Confirm password</label>
-                <input id="signup-confirm" class="form-control" type="password" autocomplete="new-password">
-                <small id="confirm-error" class="form-error"></small>
-              </div>
-              <button class="btn btn-danger" type="submit">Check form</button>
-              <p id="signup-result" class="mt-3 mb-0" aria-live="polite"></p>
-            </form>
-          </div>
-    </section>
-
-    <section class="card mb-4" aria-labelledby="subscribe-heading">
-          <div class="card-body p-4">
-            <h2 id="subscribe-heading">F1 updates</h2>
-            <p>Open the subscription form in a pop-up window.</p>
-            <button id="subscribe-button" class="btn btn-danger" type="button">Subscribe</button>
-          </div>
-    </section>
-
-    <section id="faq" class="card mb-4" aria-labelledby="faq-heading">
-      <div class="card-body p-4">
-        <h2 id="faq-heading">Frequently asked questions</h2>
-        <div class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">What happens during practice?</button>
-          <div class="faq-answer" hidden><p>Drivers learn the track and teams test their cars.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">What is qualifying?</button>
-          <div class="faq-answer" hidden><p>Drivers set lap times to decide the starting order.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">When is the race?</button>
-          <div class="faq-answer" hidden><p>The main race is usually on Sunday.</p></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div id="subscribe-popup" class="popup-overlay" hidden>
-    <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popup-title">
-      <button id="close-popup" class="popup-close" type="button" aria-label="Close">&times;</button>
-      <h2 id="popup-title" class="h4">Subscribe to F1 updates</h2>
-      <form id="subscribe-form">
-        <label for="subscribe-email" class="form-label">Email</label>
-        <input id="subscribe-email" class="form-control mb-3" type="email" required autocomplete="email">
-        <button class="btn btn-danger" type="submit">Subscribe</button>
-      </form>
-      <p id="subscribe-result" class="mt-3 mb-0" aria-live="polite"></p>
-    </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="F1 Racing: a fan guide to drivers, teams, race weekends and championship standings." name="description"/>
+  <title>
+   Contact | F1 Racing
+  </title>
+  <link href="images/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <script src="js/theme.js">
+  </script>
+  <link href="vendor/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/paddock.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to content
+  </a>
+  <div aria-hidden="true" id="scroll-progress">
   </div>
-
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">Team members: Dinmukhamed Tamdybek and Asylzhan Abdukadirov</p>
+  <header class="site-header">
+   <nav aria-label="Main navigation" class="navbar navbar-expand-xl" data-bs-theme="dark">
+    <div class="container-fluid nav-container">
+     <a class="navbar-brand" href="index.html">
+      <span aria-hidden="true" class="brand-mark">
+       //
+      </span>
+      F1 RACING
+     </a>
+     <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav main-nav ms-auto">
+       <li class="nav-item">
+        <a class="nav-link" href="index.html">
+         Home
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="teams.html">
+         Teams
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="gallery.html">
+         Gallery
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="race-centre.html">
+         Race centre
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="fan-zone.html">
+         Fan zone
+        </a>
+       </li>
+       <li class="nav-item">
+        <a aria-current="page" class="nav-link active" href="contact.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+      <div class="nav-actions">
+       <a class="btn btn-danger btn-sm" href="account.html" id="account-link">
+        Join / Log in
+       </a>
+       <button aria-pressed="false" class="btn btn-outline-light btn-sm" id="theme-toggle" type="button">
+        Dark mode
+       </button>
+      </div>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <p class="alert alert-warning m-3" hidden="" id="storage-message" role="status">
+   Browser storage is unavailable. Your choices cannot be saved until storage is allowed.
+  </p>
+  <main class="site-main py-4 py-lg-5 px-3 px-lg-4" id="main-content">
+   <section class="hero p-4 p-lg-5 mb-4">
+    <p class="eyebrow">
+     Community
+    </p>
+    <h1>
+     Talk racing with us.
+    </h1>
+    <p class="lead mb-0">
+     Explore the FAQ or draft a question for the F1 Racing team.
+    </p>
+   </section>
+   <div class="row g-4">
+    <div class="col-lg-7">
+     <section class="card">
+      <div class="card-body p-4">
+       <h2>
+        Leave a message
+       </h2>
+       <p>
+        This demo saves a draft in your browser. It does not send messages.
+       </p>
+       <form id="message-form" novalidate="">
+        <div class="form-step">
+         <h3 class="h5">
+          1. Your details
+         </h3>
+         <div class="mb-3">
+          <label class="form-label" for="contact-name">
+           Name
+          </label>
+          <input aria-describedby="contact-name-error" autocomplete="name" class="form-control" data-rule="name" id="contact-name" name="contact-name" type="text"/>
+          <small aria-live="polite" class="form-error" id="contact-name-error">
+          </small>
+         </div>
+         <div class="mb-3">
+          <label class="form-label" for="contact-email">
+           Email
+          </label>
+          <input aria-describedby="contact-email-error" autocomplete="email" class="form-control" data-rule="email" id="contact-email" inputmode="email" name="contact-email" type="text"/>
+          <small aria-live="polite" class="form-error" id="contact-email-error">
+          </small>
+         </div>
+         <div class="mb-3">
+          <label class="form-label" for="contact-phone">
+           Phone number
+          </label>
+          <input aria-describedby="contact-phone-error" autocomplete="tel" class="form-control" data-rule="phone" id="contact-phone" inputmode="tel" name="contact-phone" type="tel"/>
+          <small aria-live="polite" class="form-error" id="contact-phone-error">
+          </small>
+         </div>
+         <button class="btn btn-danger" id="message-next" type="button">
+          Next
+         </button>
+        </div>
+        <div class="form-step" hidden="">
+         <h3 class="h5">
+          2. Your question
+         </h3>
+         <div class="mb-3">
+          <label class="form-label" for="contact-topic">
+           Topic
+          </label>
+          <select aria-describedby="contact-topic-error" class="form-select" data-rule="required" id="contact-topic">
+           <option value="">
+            Choose one
+           </option>
+           <option>
+            Drivers
+           </option>
+           <option>
+            Teams
+           </option>
+           <option>
+            Race weekends
+           </option>
+           <option>
+            Website feedback
+           </option>
+          </select>
+          <small aria-live="polite" class="form-error" id="contact-topic-error">
+          </small>
+         </div>
+         <div class="mb-3">
+          <label class="form-label" for="contact-message">
+           Message
+          </label>
+          <textarea aria-describedby="contact-message-error" class="form-control" data-rule="message" id="contact-message" rows="5"></textarea>
+          <small aria-live="polite" class="form-error" id="contact-message-error">
+          </small>
+         </div>
+         <button class="btn btn-outline-dark me-2" id="message-back" type="button">
+          Back
+         </button>
+         <button class="btn btn-danger" type="submit">
+          <span aria-hidden="true" class="spinner-border spinner-border-sm">
+          </span>
+          <span class="submit-label">
+           Save message
+          </span>
+         </button>
+        </div>
+        <p class="mt-3 mb-0" id="message-result" role="status">
+        </p>
+       </form>
+      </div>
+     </section>
+    </div>
+    <div class="col-lg-5">
+     <section class="card">
+      <div class="card-body p-4">
+       <p class="eyebrow">
+        The essentials
+       </p>
+       <h2 id="faq">
+        Common questions
+       </h2>
+       <button aria-expanded="false" class="faq-question" type="button">
+        What happens during practice?
+       </button>
+       <div class="faq-answer" hidden="">
+        <p>
+         Drivers learn the track and teams test their cars.
+        </p>
+       </div>
+       <button aria-expanded="false" class="faq-question" type="button">
+        What is qualifying?
+       </button>
+       <div class="faq-answer" hidden="">
+        <p>
+         Drivers set lap times to decide the starting order.
+        </p>
+       </div>
+       <button aria-expanded="false" class="faq-question" type="button">
+        How can I find championship standings?
+       </button>
+       <div class="faq-answer" hidden="">
+        <p>
+         Open Race centre and choose an archived season to load its championship table.
+        </p>
+       </div>
+       <button aria-expanded="false" class="faq-question" type="button">
+        Where is my account saved?
+       </button>
+       <div class="faq-answer" hidden="">
+        <p>
+         This demonstration stores your profile in this browser. It is not a real online membership.
+        </p>
+       </div>
+      </div>
+     </section>
+    </div>
+   </div>
+   <div id="race-toast" role="status">
+    Your message draft has been saved.
+   </div>
+  </main>
+  <footer class="site-footer">
+   <div class="footer-inner">
+    <div>
+     <a class="footer-brand" href="index.html">
+      F1 RACING
+     </a>
+     <p>
+      For fans. From the grid to the chequered flag.
+     </p>
+    </div>
+    <div class="footer-links">
+     <a href="about.html">
+      About our team
+     </a>
+     <a href="contact.html">
+      Contact &amp; FAQ
+     </a>
+     <a href="https://github.com/Gdlllm/Assignment3WEB">
+      Source code
+     </a>
+    </div>
+   </div>
+   <p class="team-credit">
+    F1 drivers · Dinmukhamed Tamdybek &amp; Asylzhan Abdukadirov · SE-2512
+    <br/>
+    Independent student fan project. Not affiliated with Formula 1.
+   </p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
-  <script src="js/contact.js"></script>
-</body>
+  <script src="vendor/jquery-4.0.0.min.js">
+  </script>
+  <script src="vendor/bootstrap.bundle.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+  <script src="js/script.js">
+  </script>
+  <script src="js/validation.js">
+  </script>
+  <script src="js/contact.js">
+  </script>
+ </body>
 </html>

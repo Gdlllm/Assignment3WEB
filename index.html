@@ -1,156 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Made by Dinmukhamed -->
-  <meta charset="UTF-8">
-  <link rel="icon" href="data:,">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formula 1</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <!-- My CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <header>
-    <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
-      <div class="container-fluid px-4">
-        <a class="navbar-brand fw-bold" href="index.html">F1 RACING</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto main-nav">
-            <li class="nav-item"><a class="nav-link fw-bold active" aria-current="page" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="index.html#drivers">Drivers</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="teams.html">Teams</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="fan-zone.html">Fan zone</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <div class="container-fluid">
-    <div class="row">
-
-      <main class="col-12 site-main py-4 px-3 px-lg-5">
-
-        <section class="hero p-4 mb-5">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6">
-              <p class="eyebrow mb-1">Formula 1</p>
-              <h1>Welcome to Formula&nbsp;1</h1>
-              <p class="lead">Formula 1 is a popular car racing sport. Drivers race very fast cars on tracks around the world.</p>
-
-              <div class="mt-3 mt-lg-4">
-                <a href="#drivers" class="btn btn-danger btn-lg me-2 mb-2">Meet the drivers</a>
-                <a href="gallery.html" class="btn btn-outline-dark btn-lg mb-2">Open gallery</a>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <img src="images/f1-grid.jpg" class="img-fluid rounded w-100" alt="Formula 1 cars racing on a track">
-            </div>
-          </div>
-        </section>
-
-        <section id="drivers" class="mb-5">
-          <p class="eyebrow mb-1">Drivers</p>
-          <h2 class="mb-3">Formula 1 stars</h2>
-          <div class="card-group">
-            <article class="card driver-card">
-              <img src="images/max-verstappen.jpg" class="card-img-top" alt="Max Verstappen">
-              <div class="card-body">
-                <h5 class="card-title">Max Verstappen</h5>
-                <p class="card-text">Red Bull Racing driver and multiple Formula 1 World Champion.</p>
-                <a href="verstappen.html" class="btn btn-outline-danger btn-sm">Read about Max</a>
-              </div>
-            </article>
-            <article class="card driver-card">
-              <img src="images/Kimi3.jpg" class="card-img-top" alt="Kimi Antonelli">
-              <div class="card-body">
-                <h5 class="card-title">Kimi Antonelli</h5>
-                <p class="card-text">A young Mercedes driver with strong pace and potential.</p>
-                <a href="kimi.html" class="btn btn-outline-danger btn-sm">Read about Kimi</a>
-              </div>
-            </article>
-            <article class="card driver-card">
-              <img src="images/Michael1.jpg" class="card-img-top" alt="Michael Schumacher">
-              <div class="card-body">
-                <h5 class="card-title">Michael Schumacher</h5>
-                <p class="card-text">A Formula 1 legend and seven-time World Champion.</p>
-                <a href="shumakher.html" class="btn btn-outline-danger btn-sm">Read about Michael</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section id="race-weekend" class="mb-5">
-          <h2 class="mb-3">Race weekend</h2>
-          <div class="row g-3 mb-4">
-            <div class="col-md-6 col-lg-4">
-              <div class="weekend-box p-3 h-100">
-                <h5>1. Practice</h5>
-                <p class="mb-0">On Friday teams test their cars and drivers learn the track.</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="weekend-box p-3 h-100">
-                <h5>2. Qualifying</h5>
-                <p class="mb-0">On Saturday drivers set their fastest lap to decide the starting grid.</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="weekend-box p-3 h-100">
-                <h5>3. Race</h5>
-                <p class="mb-0">On Sunday drivers race for points and the win.</p>
-              </div>
-            </div>
-          </div>
-
-          <table class="table table-bordered table-striped">
-            <caption>F1 weekend schedule</caption>
-            <thead class="table-dark">
-              <tr><th>Session</th><th>Day</th><th>Purpose</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Practice</td><td>Friday</td><td>Learn the track</td></tr>
-              <tr><td>Qualifying</td><td>Saturday</td><td>Set a fast lap</td></tr>
-              <tr><td>Race</td><td>Sunday</td><td>Find the winner</td></tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="mb-4" aria-labelledby="explore-heading">
-          <h2 id="explore-heading" class="mb-3">Explore the site</h2>
-          <div class="row g-3">
-            <div class="col-md-4"><div class="card h-100"><div class="card-body">
-              <h3 class="h5">Teams</h3><p>Meet the people behind the cars.</p>
-              <a href="teams.html" class="btn btn-outline-danger">See teams</a>
-            </div></div></div>
-            <div class="col-md-4"><div class="card h-100"><div class="card-body">
-              <h3 class="h5">Fan zone</h3><p>Explore a race weekend and try the race lights.</p>
-              <a href="fan-zone.html" class="btn btn-outline-danger">Open Fan zone</a>
-            </div></div></div>
-            <div class="col-md-4"><div class="card h-100"><div class="card-body">
-              <h3 class="h5">Contact</h3><p>Find forms, subscription and common questions.</p>
-              <a href="contact.html" class="btn btn-outline-danger">Get in touch</a>
-            </div></div></div>
-          </div>
-        </section>
-
-      </main>
-    </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="F1 Racing: a fan guide to drivers, teams, race weekends and championship standings." name="description"/>
+  <title>
+   Home | F1 Racing
+  </title>
+  <link href="images/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <script src="js/theme.js">
+  </script>
+  <link href="vendor/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/paddock.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to content
+  </a>
+  <div aria-hidden="true" id="scroll-progress">
   </div>
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">Team members: Dinmukhamed Tamdybek and Asylzhan Abdukadirov</p>
+  <header class="site-header">
+   <nav aria-label="Main navigation" class="navbar navbar-expand-xl" data-bs-theme="dark">
+    <div class="container-fluid nav-container">
+     <a class="navbar-brand" href="index.html">
+      <span aria-hidden="true" class="brand-mark">
+       //
+      </span>
+      F1 RACING
+     </a>
+     <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav main-nav ms-auto">
+       <li class="nav-item">
+        <a aria-current="page" class="nav-link active" href="index.html">
+         Home
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="teams.html">
+         Teams
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="gallery.html">
+         Gallery
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="race-centre.html">
+         Race centre
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="fan-zone.html">
+         Fan zone
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="contact.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+      <div class="nav-actions">
+       <a class="btn btn-danger btn-sm" href="account.html" id="account-link">
+        Join / Log in
+       </a>
+       <button aria-pressed="false" class="btn btn-outline-light btn-sm" id="theme-toggle" type="button">
+        Dark mode
+       </button>
+      </div>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <p class="alert alert-warning m-3" hidden="" id="storage-message" role="status">
+   Browser storage is unavailable. Your choices cannot be saved until storage is allowed.
+  </p>
+  <main class="site-main py-4 py-lg-5 px-3 px-lg-4" id="main-content">
+   <section class="hero p-4 mb-5">
+    <div class="row g-4 align-items-center">
+     <div class="col-lg-6">
+      <p class="eyebrow mb-1">
+       Formula 1
+      </p>
+      <h1>
+       Closer to the grid.
+      </h1>
+      <p class="lead">
+       Meet the drivers, understand the teams and explore the stories behind a race weekend. Your starting point for Formula 1.
+      </p>
+      <div class="mt-3 mt-lg-4">
+       <a class="btn btn-danger btn-lg me-2 mb-2" href="#drivers">
+        Meet the drivers
+       </a>
+       <a class="btn btn-outline-dark btn-lg mb-2" href="race-centre.html">
+        Explore standings
+       </a>
+      </div>
+     </div>
+     <div class="col-lg-6">
+      <img alt="Formula 1 cars racing on a track" class="img-fluid rounded w-100" src="images/f1-grid.jpg"/>
+     </div>
+    </div>
+   </section>
+   <section class="mb-5" id="drivers">
+    <p class="eyebrow mb-1">
+     Drivers
+    </p>
+    <h2 class="mb-3">
+     Formula 1 stars
+    </h2>
+    <div class="driver-search mb-3">
+     <label class="form-label fw-bold" for="driver-query">
+      Search the driver profiles
+     </label>
+     <div class="input-group">
+      <input aria-controls="driver-results" autocomplete="off" class="form-control" id="driver-query" placeholder="Try a name, team or keyword" type="search"/>
+      <button class="btn btn-outline-dark btn-sm" id="clear-search" type="button">
+       Clear search
+      </button>
+     </div>
+     <div aria-label="Suggested driver profiles" class="dropdown-menu w-100" id="driver-suggestions">
+     </div>
+    </div>
+    <p class="small text-secondary" id="driver-count" role="status">
+     3 driver profiles
+    </p>
+    <div class="driver-grid" id="driver-results">
+     <article class="card driver-card">
+      <img alt="Max Verstappen" class="card-img-top" src="images/Max1.jpg"/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Max Verstappen
+       </h5>
+       <p class="card-text">
+        Red Bull Racing driver and multiple Formula 1 World Champion.
+       </p>
+       <a class="btn btn-outline-danger btn-sm" href="verstappen.html">
+        Read about Max
+       </a>
+      </div>
+     </article>
+     <article class="card driver-card">
+      <img alt="Kimi Antonelli" class="card-img-top" src="images/Kimi3.jpg"/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Kimi Antonelli
+       </h5>
+       <p class="card-text">
+        A young Mercedes driver with strong pace and potential.
+       </p>
+       <a class="btn btn-outline-danger btn-sm" href="kimi.html">
+        Read about Kimi
+       </a>
+      </div>
+     </article>
+     <article class="card driver-card">
+      <img alt="Michael Schumacher" class="card-img-top" src="images/Michael1.jpg"/>
+      <div class="card-body">
+       <h5 class="card-title">
+        Michael Schumacher
+       </h5>
+       <p class="card-text">
+        A Formula 1 legend and seven-time World Champion.
+       </p>
+       <a class="btn btn-outline-danger btn-sm" href="shumakher.html">
+        Read about Michael
+       </a>
+      </div>
+     </article>
+    </div>
+   </section>
+   <section class="mb-5" id="race-weekend">
+    <h2 class="mb-3">
+     Race weekend
+    </h2>
+    <div class="row g-3 mb-4">
+     <div class="col-md-6 col-lg-4">
+      <div class="weekend-box p-3 h-100">
+       <h5>
+        1. Practice
+       </h5>
+       <p class="mb-0">
+        On Friday teams test their cars and drivers learn the track.
+       </p>
+      </div>
+     </div>
+     <div class="col-md-6 col-lg-4">
+      <div class="weekend-box p-3 h-100">
+       <h5>
+        2. Qualifying
+       </h5>
+       <p class="mb-0">
+        On Saturday drivers set their fastest lap to decide the starting grid.
+       </p>
+      </div>
+     </div>
+     <div class="col-md-6 col-lg-4">
+      <div class="weekend-box p-3 h-100">
+       <h5>
+        3. Race
+       </h5>
+       <p class="mb-0">
+        On Sunday drivers race for points and the win.
+       </p>
+      </div>
+     </div>
+    </div>
+    <aside aria-label="Race weekend at a glance" class="race-stats mb-4">
+     <div>
+      <strong data-count="3">
+       3
+      </strong>
+      <span>
+       Weekend days
+      </span>
+     </div>
+     <div>
+      <strong data-count="60">
+       60
+      </strong>
+      <span>
+       Minutes in one practice session
+      </span>
+     </div>
+    </aside>
+    <div class="copy-panel mb-4">
+     <div>
+      <p class="eyebrow mb-1">
+       Weekend reminder
+      </p>
+      <p class="mb-0" id="weekend-note">
+       Friday: Practice. Saturday: Qualifying. Sunday: Race.
+      </p>
+     </div>
+     <button class="btn btn-outline-dark" id="copy-note" type="button">
+      <span aria-hidden="true">
+       ⧉
+      </span>
+      Copy
+     </button>
+     <span id="copy-tip" role="status"></span>
+    </div>
+   </section>
+   <section aria-labelledby="explore-heading" class="mb-4">
+    <h2 class="mb-3" id="explore-heading">
+     Explore the site
+    </h2>
+    <div class="row g-3">
+     <div class="col-md-4">
+      <div class="card h-100">
+       <div class="card-body">
+        <h3 class="h5">
+         Teams
+        </h3>
+        <p>
+         Meet the people behind the cars.
+        </p>
+        <a class="btn btn-outline-danger" href="teams.html">
+         See teams
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="col-md-4">
+      <div class="card h-100">
+       <div class="card-body">
+        <h3 class="h5">
+         Fan zone
+        </h3>
+        <p>
+         Explore a race weekend and try the race lights.
+        </p>
+        <a class="btn btn-outline-danger" href="fan-zone.html">
+         Open Fan zone
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="col-md-4">
+      <div class="card h-100">
+       <div class="card-body">
+        <h3 class="h5">
+         Contact
+        </h3>
+        <p>
+         Save a message draft or find answers to common questions.
+        </p>
+        <a class="btn btn-outline-danger" href="contact.html">
+         Get in touch
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="footer-inner">
+    <div>
+     <a class="footer-brand" href="index.html">
+      F1 RACING
+     </a>
+     <p>
+      For fans. From the grid to the chequered flag.
+     </p>
+    </div>
+    <div class="footer-links">
+     <a href="about.html">
+      About our team
+     </a>
+     <a href="contact.html">
+      Contact &amp; FAQ
+     </a>
+     <a href="https://github.com/Gdlllm/Assignment3WEB">
+      Source code
+     </a>
+    </div>
+   </div>
+   <p class="team-credit">
+    F1 drivers · Dinmukhamed Tamdybek &amp; Asylzhan Abdukadirov · SE-2512
+    <br/>
+    Independent student fan project. Not affiliated with Formula 1.
+   </p>
   </footer>
-
-  <!-- Bootstrap JavaScript for the mobile navigation -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
-</body>
+  <script src="vendor/jquery-4.0.0.min.js">
+  </script>
+  <script src="vendor/bootstrap.bundle.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+  <script src="js/script.js">
+  </script>
+ </body>
 </html>

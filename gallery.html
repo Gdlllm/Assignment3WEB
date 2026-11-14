@@ -1,93 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Gallery page -->
-  <meta charset="UTF-8">
-  <link rel="icon" href="data:,">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | F1 Racing</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <!-- My CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <header>
-    <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
-      <div class="container-fluid px-4">
-        <a class="navbar-brand fw-bold" href="index.html">F1 RACING</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto main-nav">
-            <li class="nav-item"><a class="nav-link fw-bold" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="index.html#drivers">Drivers</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="teams.html">Teams</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold active" aria-current="page" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="fan-zone.html">Fan zone</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <div class="container-fluid">
-    <div class="row">
-
-      <main class="col-12 site-main py-4 px-3 px-lg-5">
-        <h1>Gallery</h1>
-        <p class="lead mb-4">All photos of our drivers in one place.</p>
-
-        <section class="card mb-5" aria-labelledby="featured-heading">
-          <div class="card-body p-4">
-            <h2 id="featured-heading">Featured photo</h2>
-            <p>Choose a thumbnail to change the large photo.</p>
-            <img id="featured-photo" src="images/Max1.jpg" class="featured-photo rounded" alt="Max Verstappen">
-            <p id="featured-caption" class="mt-2 mb-3">Max Verstappen</p>
-            <div class="gallery-thumbs" role="group" aria-label="Choose a featured photo">
-              <button class="gallery-thumb selected" type="button" data-image="images/Max1.jpg" data-caption="Max Verstappen" aria-pressed="true" aria-label="Show Max Verstappen">
-                <img src="images/Max1.jpg" alt="">
-              </button>
-              <button class="gallery-thumb" type="button" data-image="images/Kimi3.jpg" data-caption="Kimi Antonelli" aria-pressed="false" aria-label="Show Kimi Antonelli">
-                <img src="images/Kimi3.jpg" alt="">
-              </button>
-              <button class="gallery-thumb" type="button" data-image="images/Michael1.jpg" data-caption="Michael Schumacher" aria-pressed="false" aria-label="Show Michael Schumacher">
-                <img src="images/Michael1.jpg" alt="">
-              </button>
-              <button class="gallery-thumb" type="button" data-image="images/f1-grid.jpg" data-caption="Race start" aria-pressed="false" aria-label="Show race start">
-                <img src="images/f1-grid.jpg" alt="">
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <!-- All photos: 2 in a row on phones, 3 in a row from tablets -->
-        <h2 class="mb-3">All photos</h2>
-        <div class="row g-3">
-          <div class="col-6 col-md-4"><img src="images/Max1.jpg" class="img-fluid rounded w-100 photo" alt="Max Verstappen"></div>
-          <div class="col-6 col-md-4"><img src="images/Max2.jpg" class="img-fluid rounded w-100 photo" alt="Max Verstappen celebrating"></div>
-          <div class="col-6 col-md-4"><img src="images/Max3.jpg" class="img-fluid rounded w-100 photo" alt="Max Verstappen winner poster"></div>
-          <div class="col-6 col-md-4"><img src="images/Kimi1.jpg" class="img-fluid rounded w-100 photo" alt="Kimi Antonelli in the paddock"></div>
-          <div class="col-6 col-md-4"><img src="images/Kimi2.jpg" class="img-fluid rounded w-100 photo" alt="Kimi Antonelli signing autographs"></div>
-          <div class="col-6 col-md-4"><img src="images/Kimi3.jpg" class="img-fluid rounded w-100 photo" alt="Kimi Antonelli"></div>
-          <div class="col-6 col-md-4"><img src="images/Michael1.jpg" class="img-fluid rounded w-100 photo" alt="Michael Schumacher"></div>
-          <div class="col-6 col-md-4"><img src="images/Michael2.jpg" class="img-fluid rounded w-100 photo" alt="Michael Schumacher celebrating on his Ferrari"></div>
-          <div class="col-6 col-md-4"><img src="images/Michael3.jpg" class="img-fluid rounded w-100 photo" alt="Michael Schumacher driving a Ferrari"></div>
-        </div>
-      </main>
-    </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="F1 Racing: a fan guide to drivers, teams, race weekends and championship standings." name="description"/>
+  <title>
+   Gallery | F1 Racing
+  </title>
+  <link href="images/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <script src="js/theme.js">
+  </script>
+  <link href="vendor/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/paddock.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to content
+  </a>
+  <div aria-hidden="true" id="scroll-progress">
   </div>
-
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">Team members: Dinmukhamed Tamdybek and Asylzhan Abdukadirov</p>
+  <header class="site-header">
+   <nav aria-label="Main navigation" class="navbar navbar-expand-xl" data-bs-theme="dark">
+    <div class="container-fluid nav-container">
+     <a class="navbar-brand" href="index.html">
+      <span aria-hidden="true" class="brand-mark">
+       //
+      </span>
+      F1 RACING
+     </a>
+     <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav main-nav ms-auto">
+       <li class="nav-item">
+        <a class="nav-link" href="index.html">
+         Home
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="teams.html">
+         Teams
+        </a>
+       </li>
+       <li class="nav-item">
+        <a aria-current="page" class="nav-link active" href="gallery.html">
+         Gallery
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="race-centre.html">
+         Race centre
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="fan-zone.html">
+         Fan zone
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="contact.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+      <div class="nav-actions">
+       <a class="btn btn-danger btn-sm" href="account.html" id="account-link">
+        Join / Log in
+       </a>
+       <button aria-pressed="false" class="btn btn-outline-light btn-sm" id="theme-toggle" type="button">
+        Dark mode
+       </button>
+      </div>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <p class="alert alert-warning m-3" hidden="" id="storage-message" role="status">
+   Browser storage is unavailable. Your choices cannot be saved until storage is allowed.
+  </p>
+  <main class="site-main py-4 py-lg-5 px-3 px-lg-4" id="main-content">
+   <h1>
+    Gallery
+   </h1>
+   <p class="lead mb-4">
+    All photos of our drivers in one place.
+   </p>
+   <section aria-labelledby="featured-heading" class="card mb-5">
+    <div class="card-body p-4">
+     <h2 id="featured-heading">
+      Featured photo
+     </h2>
+     <p>
+      Choose a thumbnail to change the large photo.
+     </p>
+     <img alt="Max Verstappen" class="featured-photo rounded" id="featured-photo" src="images/Max1.jpg"/>
+     <p class="mt-2 mb-3" id="featured-caption">
+      Max Verstappen
+     </p>
+     <div aria-label="Choose a featured photo" class="gallery-thumbs" role="group">
+      <button aria-label="Show Max Verstappen" aria-pressed="true" class="gallery-thumb selected" data-caption="Max Verstappen" data-image="images/Max1.jpg" type="button">
+       <img alt="" src="images/Max1.jpg"/>
+      </button>
+      <button aria-label="Show Kimi Antonelli" aria-pressed="false" class="gallery-thumb" data-caption="Kimi Antonelli" data-image="images/Kimi3.jpg" type="button">
+       <img alt="" src="images/Kimi3.jpg"/>
+      </button>
+      <button aria-label="Show Michael Schumacher" aria-pressed="false" class="gallery-thumb" data-caption="Michael Schumacher" data-image="images/Michael1.jpg" type="button">
+       <img alt="" src="images/Michael1.jpg"/>
+      </button>
+      <button aria-label="Show race start" aria-pressed="false" class="gallery-thumb" data-caption="Race start" data-image="images/f1-grid.jpg" type="button">
+       <img alt="" src="images/f1-grid.jpg"/>
+      </button>
+     </div>
+    </div>
+   </section>
+   <!-- All photos: 2 in a row on phones, 3 in a row from tablets -->
+   <h2 class="mb-3">
+    All photos
+   </h2>
+   <div class="row g-3">
+    <div class="col-6 col-md-4">
+     <img alt="Max Verstappen" class="img-fluid rounded w-100 photo" data-src="images/Max1.jpg"/>
+    </div>
+    <div class="col-6 col-md-4">
+     <img alt="Max Verstappen celebrating" class="img-fluid rounded w-100 photo" data-src="images/Max2.jpg"/>
+    </div>
+    <div class="col-6 col-md-4">
+     <img alt="Max Verstappen winner poster" class="img-fluid rounded w-100 photo" data-src="images/Max3.jpg"/>
+    </div>
+    <div class="col-6 col-md-4">
+     <img alt="Kimi Antonelli in the paddock" class="img-fluid rounded w-100 photo" data-src="images/Kimi1.jpg"/>
+    </div>
+    <div class="col-6 col-md-4">
+     <img alt="Kimi Antonelli signing autographs" class="img-fluid rounded w-100 photo" data-src="images/Kimi2.jpg"/>
+    </div>
+    <div class="col-6 col-md-4">
+     <img alt="Kimi Antonelli" class="img-fluid rounded w-100 photo" data-src="images/Kimi3.jpg"/>
+    </div>
+    <div class="col-6 col-md-4">
+     <img alt="Michael Schumacher" class="img-fluid rounded w-100 photo" data-src="images/Michael1.jpg"/>
+    </div>
+    <div class="col-6 col-md-4">
+     <img alt="Michael Schumacher celebrating on his Ferrari" class="img-fluid rounded w-100 photo" data-src="images/Michael2.jpg"/>
+    </div>
+    <div class="col-6 col-md-4">
+     <img alt="Michael Schumacher driving a Ferrari" class="img-fluid rounded w-100 photo" data-src="images/Michael3.jpg"/>
+    </div>
+   </div>
+  </main>
+  <footer class="site-footer">
+   <div class="footer-inner">
+    <div>
+     <a class="footer-brand" href="index.html">
+      F1 RACING
+     </a>
+     <p>
+      For fans. From the grid to the chequered flag.
+     </p>
+    </div>
+    <div class="footer-links">
+     <a href="about.html">
+      About our team
+     </a>
+     <a href="contact.html">
+      Contact &amp; FAQ
+     </a>
+     <a href="https://github.com/Gdlllm/Assignment3WEB">
+      Source code
+     </a>
+    </div>
+   </div>
+   <p class="team-credit">
+    F1 drivers · Dinmukhamed Tamdybek &amp; Asylzhan Abdukadirov · SE-2512
+    <br/>
+    Independent student fan project. Not affiliated with Formula 1.
+   </p>
   </footer>
-
-  <!-- Bootstrap JavaScript for the mobile navigation -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
-  <script src="js/gallery.js"></script>
-</body>
+  <script src="vendor/jquery-4.0.0.min.js">
+  </script>
+  <script src="vendor/bootstrap.bundle.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+  <script src="js/script.js">
+  </script>
+  <script src="js/gallery.js">
+  </script>
+ </body>
 </html>

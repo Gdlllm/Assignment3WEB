@@ -1,73 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Part 1: Media Queries. This page does not use Bootstrap -->
-  <meta charset="UTF-8">
-  <link rel="icon" href="data:,">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F1 Teams | F1 Racing</title>
-  <link rel="stylesheet" href="css/teams.css">
-</head>
-<body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="F1 Racing: a fan guide to drivers, teams, race weekends and championship standings." name="description"/>
+  <title>
+   Teams | F1 Racing
+  </title>
+  <link href="images/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <script src="js/theme.js">
+  </script>
+  <link href="vendor/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/paddock.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to content
+  </a>
+  <div aria-hidden="true" id="scroll-progress">
+  </div>
   <header class="site-header">
-    <a class="logo" href="index.html">F1 RACING</a>
-    <nav class="site-nav main-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="index.html#drivers">Drivers</a>
-      <a href="teams.html" class="active" aria-current="page">Teams</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="fan-zone.html">Fan zone</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main class="page">
-
-    <section>
-      <h1>Formula 1 teams</h1>
-      <p>In Formula 1 every team builds its own car. A team has two race drivers and hundreds of engineers, mechanics and strategists who work together to make the car fast and reliable.</p>
-
-      <h2>What a team does</h2>
-      <p>Before the season the team designs the car in its factory. During a race weekend the mechanics prepare the car, the engineers study the data and the strategists decide when the drivers should stop for new tyres.</p>
-
-      <h3>Two championships</h3>
-      <p>Each season has two titles. The Drivers' Championship is for the best driver, and the Constructors' Championship is for the best team. The points of both team drivers are added together for the team.</p>
-    </section>
-
-    <section>
-      <h2>Teams of our drivers</h2>
-      <div class="team-cards">
-        <article class="team-card">
-          <img src="images/Max2.jpg" alt="Max Verstappen in his Red Bull Racing suit">
-          <div class="team-card-body">
-            <h3>Red Bull Racing</h3>
-            <p>An Austrian team based in Milton Keynes, England. It joined Formula 1 in 2005 and won many titles with Sebastian Vettel and Max Verstappen.</p>
-            <a class="team-link" href="verstappen.html">Driver: Max Verstappen</a>
-          </div>
-        </article>
-        <article class="team-card">
-          <img src="images/Kimi3.jpg" alt="Kimi Antonelli in his Mercedes race suit">
-          <div class="team-card-body">
-            <h3>Mercedes-AMG Petronas</h3>
-            <p>A German team based in Brackley, England. It won eight Constructors' Championships in a row, from 2014 to 2021.</p>
-            <a class="team-link" href="kimi.html">Driver: Kimi Antonelli</a>
-          </div>
-        </article>
-        <article class="team-card">
-          <img src="images/Michael3.jpg" alt="Michael Schumacher driving a Ferrari">
-          <div class="team-card-body">
-            <h3>Scuderia Ferrari</h3>
-            <p>The oldest and most famous team in Formula 1. Ferrari has raced in every World Championship season since 1950.</p>
-            <a class="team-link" href="shumakher.html">Legend: Michael Schumacher</a>
-          </div>
-        </article>
+   <nav aria-label="Main navigation" class="navbar navbar-expand-xl" data-bs-theme="dark">
+    <div class="container-fluid nav-container">
+     <a class="navbar-brand" href="index.html">
+      <span aria-hidden="true" class="brand-mark">
+       //
+      </span>
+      F1 RACING
+     </a>
+     <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav main-nav ms-auto">
+       <li class="nav-item">
+        <a class="nav-link" href="index.html">
+         Home
+        </a>
+       </li>
+       <li class="nav-item">
+        <a aria-current="page" class="nav-link active" href="teams.html">
+         Teams
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="gallery.html">
+         Gallery
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="race-centre.html">
+         Race centre
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="fan-zone.html">
+         Fan zone
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="contact.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+      <div class="nav-actions">
+       <a class="btn btn-danger btn-sm" href="account.html" id="account-link">
+        Join / Log in
+       </a>
+       <button aria-pressed="false" class="btn btn-outline-light btn-sm" id="theme-toggle" type="button">
+        Dark mode
+       </button>
       </div>
-    </section>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <p class="alert alert-warning m-3" hidden="" id="storage-message" role="status">
+   Browser storage is unavailable. Your choices cannot be saved until storage is allowed.
+  </p>
+  <main class="site-main py-4 py-lg-5 px-3 px-lg-4" id="main-content">
+   <section>
+    <h1>
+     Formula 1 teams
+    </h1>
+    <p>
+     In Formula 1 every team builds its own car. A team has two race drivers and hundreds of engineers, mechanics and strategists who work together to make the car fast and reliable.
+    </p>
+    <h2>
+     What a team does
+    </h2>
+    <p>
+     Before the season the team designs the car in its factory. During a race weekend the mechanics prepare the car, the engineers study the data and the strategists decide when the drivers should stop for new tyres.
+    </p>
+    <h3>
+     Two championships
+    </h3>
+    <p>
+     Each season has two titles. The Drivers' Championship is for the best driver, and the Constructors' Championship is for the best team. The points of both team drivers are added together for the team.
+    </p>
+   </section>
+   <section>
+    <h2>
+     Teams of our drivers
+    </h2>
+    <div class="team-cards">
+     <article class="team-card">
+      <img alt="Max Verstappen in his Red Bull Racing suit" src="images/Max2.jpg"/>
+      <div class="team-card-body">
+       <h3>
+        Red Bull Racing
+       </h3>
+       <p>
+        An Austrian team based in Milton Keynes, England. It joined Formula 1 in 2005 and won many titles with Sebastian Vettel and Max Verstappen.
+       </p>
+       <a class="team-link" href="verstappen.html">
+        Driver: Max Verstappen
+       </a>
+      </div>
+     </article>
+     <article class="team-card">
+      <img alt="Kimi Antonelli in his Mercedes race suit" src="images/Kimi3.jpg"/>
+      <div class="team-card-body">
+       <h3>
+        Mercedes-AMG Petronas
+       </h3>
+       <p>
+        A German team based in Brackley, England. It won eight Constructors' Championships in a row, from 2014 to 2021.
+       </p>
+       <a class="team-link" href="kimi.html">
+        Driver: Kimi Antonelli
+       </a>
+      </div>
+     </article>
+     <article class="team-card">
+      <img alt="Michael Schumacher driving a Ferrari" src="images/Michael3.jpg"/>
+      <div class="team-card-body">
+       <h3>
+        Scuderia Ferrari
+       </h3>
+       <p>
+        The oldest and most famous team in Formula 1. Ferrari has raced in every World Championship season since 1950.
+       </p>
+       <a class="team-link" href="shumakher.html">
+        Legend: Michael Schumacher
+       </a>
+      </div>
+     </article>
+    </div>
+   </section>
   </main>
-
   <footer class="site-footer">
-    <p>Team members: Dinmukhamed Tamdybek and Asylzhan Abdukadirov</p>
+   <div class="footer-inner">
+    <div>
+     <a class="footer-brand" href="index.html">
+      F1 RACING
+     </a>
+     <p>
+      For fans. From the grid to the chequered flag.
+     </p>
+    </div>
+    <div class="footer-links">
+     <a href="about.html">
+      About our team
+     </a>
+     <a href="contact.html">
+      Contact &amp; FAQ
+     </a>
+     <a href="https://github.com/Gdlllm/Assignment3WEB">
+      Source code
+     </a>
+    </div>
+   </div>
+   <p class="team-credit">
+    F1 drivers · Dinmukhamed Tamdybek &amp; Asylzhan Abdukadirov · SE-2512
+    <br/>
+    Independent student fan project. Not affiliated with Formula 1.
+   </p>
   </footer>
-  <script src="js/main.js"></script>
-</body>
+  <script src="vendor/jquery-4.0.0.min.js">
+  </script>
+  <script src="vendor/bootstrap.bundle.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+  <script src="js/script.js">
+  </script>
+ </body>
 </html>

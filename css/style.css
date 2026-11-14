@@ -1,280 +1,93 @@
-/* Shared styles for the Bootstrap pages. */
-
-body {
-  background-color: #f2f2f2;
-  transition: background-color 0.3s;
-}
-
-.site-main {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.form-narrow { max-width: 680px; }
-
-.featured-photo {
-  display: block;
-  width: 100%;
-  height: 420px;
-  object-fit: contain;
-  background: #111;
-}
-
-.gallery-thumbs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-
-.gallery-thumb {
-  padding: 3px;
-  border: 3px solid transparent;
-  border-radius: 6px;
-  background: white;
-}
-
-.gallery-thumb.selected,
-.gallery-thumb:focus-visible {
-  border-color: #d00000;
-}
-
-.gallery-thumb img {
-  width: 100%;
-  height: 95px;
-  object-fit: cover;
-}
-
-.race-lights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.race-lights span {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #4a1414;
-  box-shadow: inset 0 0 8px #111;
-}
-
-.race-lights.running span {
-  animation: light-up 0.8s ease-in-out;
-}
-
-.race-lights.running span:nth-child(2) { animation-delay: 0.1s; }
-.race-lights.running span:nth-child(3) { animation-delay: 0.2s; }
-.race-lights.running span:nth-child(4) { animation-delay: 0.3s; }
-.race-lights.running span:nth-child(5) { animation-delay: 0.4s; }
-
-@keyframes light-up {
-  0%, 100% { background: #4a1414; transform: scale(1); }
-  50% { background: #ff2020; transform: scale(1.15); }
-}
-
-.rating-star {
-  border: 0;
-  background: transparent;
-  color: #aaa;
-  font-size: 42px;
-  line-height: 1;
-}
-
-.rating-star.selected { color: #d00000; }
-.rating-star:focus-visible { outline: 2px solid #d00000; }
-
-.night-mode {
-  background-color: #171717;
-  color: #f5f5f5;
-}
-
-.night-mode .card,
-.night-mode .hero,
-.night-mode .weekend-box,
-.night-mode .faq-question {
-  background-color: #292929;
-  color: #f5f5f5;
-}
-
-.night-mode .btn-outline-dark {
-  color: #f5f5f5;
-  border-color: #f5f5f5;
-}
-
-.night-mode .btn-outline-dark:hover { color: #171717; background-color: #f5f5f5; }
-
-.form-error {
-  display: block;
-  color: #b00020;
-  min-height: 1.2em;
-}
-
-.faq-question {
-  display: block;
-  width: 100%;
-  padding: 12px 0;
-  border: 0;
-  border-bottom: 1px solid #ddd;
-  background: white;
-  text-align: left;
-  font-weight: bold;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.faq-answer.open {
-  max-height: 120px;
-}
-
-.faq-answer p {
-  margin: 12px 0;
-}
-
-.popup-overlay:not([hidden]) {
-  display: flex;
-}
-
-.popup-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 1050;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.65);
-}
-
-.popup-box {
-  position: relative;
-  width: min(100%, 420px);
-  padding: 28px;
-  border-radius: 8px;
-  background: white;
-}
-
-.popup-close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  border: 0;
-  background: transparent;
-  font-size: 28px;
-}
-
-h1,
-h2,
-h3 {
-  color: #d00000;
-}
-
-/* Navbar links */
-.navbar .nav-link {
-  color: white;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-  color: #ff5d5d;
-}
-
-/* Small red text above titles */
-.eyebrow {
-  color: #d00000;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* Sidebar */
-.sidebar {
-  background-color: #e5e5e5;
-}
-
-.sidebar .list-group-item.active {
-  background-color: #d00000;
-  border-color: #d00000;
-}
-
-/* White block with red line on the left (home page and driver pages) */
-.hero {
-  background-color: white;
-  border-left: 5px solid #d00000;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
-}
-
-.hero img {
-  height: 320px;
-  object-fit: cover;
-  object-position: center 20%; /* show the upper part of the photo */
-}
-
-/* Driver cards */
-.card-img-top {
-  height: 220px;
-  object-fit: cover;
-  object-position: center 20%;
-}
-
-.driver-card {
-  transition: transform 0.2s;
-}
-
-.driver-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
-}
-
-/* Race weekend boxes */
-.weekend-box {
-  background-color: white;
-  border-left: 4px solid #d00000;
-}
-
-/* Facts on driver pages */
-.fact {
-  background-color: #f2f2f2;
-}
-
-.fact strong {
-  display: block;
-  color: #d00000;
-}
-
-/* Photos with the same height (gallery and driver pages) */
-.photo {
-  height: 220px;
-  object-fit: cover;
-  object-position: center 20%;
-}
-
-/* Carousel */
-.carousel-item img {
-  height: 500px;
-  object-fit: contain; /* the whole photo is visible */
-  background-color: black;
-}
-
-.carousel-caption {
-  bottom: 40px; /* a bit higher, so it does not cover the dots */
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-}
-
-/* Phones: pictures are smaller */
-@media (max-width: 767px) {
-  .featured-photo { height: 280px; }
-  .gallery-thumb img { height: 65px; }
-
-  .hero img {
-    height: 260px;
-  }
-
-  .carousel-item img {
-    height: 300px;
-  }
-}
+/* Shared colours keep every page consistent in both modes. */
+:root { --page:#f4f3f1; --panel:#fff; --ink:#202128; --muted:#575c67; --line:#d9dce1; --accent:#ba102b; --soft:#eeece9; }
+[data-bs-theme="dark"] { --page:#14161b; --panel:#20232b; --ink:#f0f1f4; --muted:#b8bfcd; --line:#444a57; --accent:#ff8798; --soft:#2b303a; }
+body { background:var(--page); color:var(--ink); font-family:Arial,Helvetica,sans-serif; line-height:1.6; transition:background-color .2s,color .2s; }
+[hidden] { display:none !important; }
+a { color:var(--accent); text-underline-offset:3px; }
+a:hover { color:var(--ink); }
+img { max-width:100%; }
+h1,h2,h3 { color:var(--accent); font-weight:750; line-height:1.15; }
+h1 { font-size:clamp(2.2rem,4.8vw,4rem); letter-spacing:-.04em; margin-bottom:1rem; }
+h2 { font-size:clamp(1.55rem,3vw,2.1rem); margin-bottom:1rem; }
+h3 { font-size:1.35rem; }
+.site-main { max-width:1180px; margin:auto; min-height:65vh; }
+.site-main > section { margin-bottom:2rem; }
+.site-header { background:#111318; border-bottom:3px solid #cf1435; }
+.nav-container { max-width:1380px; padding:12px 24px; }
+.navbar-brand,.footer-brand { font-weight:800; letter-spacing:.04em; text-decoration:none; color:#fff; }
+.brand-mark { color:#ff526e; font-size:1.8rem; font-style:italic; }
+.navbar .nav-link { color:#eee; padding:.6rem .7rem !important; font-size:.95rem; font-weight:600; }
+.navbar .nav-link:hover,.navbar .nav-link.active { color:#ff92a4; }
+.nav-actions { display:flex; gap:10px; margin-left:18px; flex-wrap:wrap; }
+.navbar .btn { white-space:nowrap; }
+.skip-link { position:absolute; left:12px; top:-100px; z-index:3000; padding:12px; background:var(--panel); }
+.skip-link:focus { top:8px; }
+:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+.hero { background:var(--panel); border-left:5px solid #cf1435; border-radius:4px 16px 16px 4px; box-shadow:0 8px 26px #00000008; }
+.hero img { width:100%; height:330px; object-fit:cover; object-position:center 20%; }
+.eyebrow { color:var(--accent); font-size:.78rem; font-weight:750; letter-spacing:.14em; text-transform:uppercase; }
+.lead { font-size:1.12rem; color:var(--muted); max-width:65ch; }
+.card,.team-card { background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+.card-body { padding:1.4rem; }
+.card-img-top { height:240px; object-fit:cover; object-position:center 20%; }
+.card-title { color:var(--ink); font-weight:700; }
+.driver-card { transition:transform .2s,box-shadow .2s; }
+.driver-card:hover { transform:translateY(-4px); box-shadow:0 12px 22px #0002; }
+.btn { border-radius:7px; font-weight:650; transition:background .18s,transform .18s,box-shadow .18s; }
+.btn:hover { transform:translateY(-2px); box-shadow:0 4px 10px #0002; }
+.btn-danger { --bs-btn-bg:#ba102b; --bs-btn-border-color:#ba102b; --bs-btn-hover-bg:#960d23; --bs-btn-hover-border-color:#960d23; --bs-btn-active-bg:#960d23; }
+.btn-outline-danger { --bs-btn-color:var(--accent); --bs-btn-border-color:var(--accent); --bs-btn-hover-bg:#ba102b; --bs-btn-hover-border-color:#ba102b; --bs-btn-active-bg:#ba102b; }
+.btn-outline-dark { --bs-btn-color:var(--ink); --bs-btn-border-color:var(--muted); --bs-btn-hover-bg:var(--ink); --bs-btn-hover-color:var(--panel); --bs-btn-active-bg:var(--ink); --bs-btn-active-color:var(--panel); }
+.weekend-box { background:var(--panel); border-left:4px solid #cf1435; border-radius:5px; }
+.fact { background:var(--soft); border-radius:5px; }
+.fact strong { display:block; color:var(--accent); }
+.photo { height:220px; object-fit:cover; object-position:center 20%; }
+.featured-photo { display:block; width:100%; height:420px; object-fit:contain; background:#111; }
+.gallery-thumbs { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.gallery-thumb { padding:3px; border:3px solid transparent; border-radius:6px; background:var(--panel); }
+.gallery-thumb.selected,.gallery-thumb:focus-visible { border-color:var(--accent); }
+.gallery-thumb img { width:100%; height:95px; object-fit:cover; }
+.team-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.team-card img { width:100%; height:240px; object-fit:cover; object-position:center 20%; }
+.team-card-body { padding:24px; }
+.team-link { font-weight:700; }
+.race-lights { display:flex; flex-wrap:wrap; gap:12px; }
+.race-lights span { width:44px; height:44px; border-radius:50%; background:#4a1414; box-shadow:inset 0 0 8px #111; border:1px solid #a45454; }
+.race-lights.running span { animation:light-up .8s ease-in-out; }
+.race-lights.running span:nth-child(2) { animation-delay:.1s; }
+.race-lights.running span:nth-child(3) { animation-delay:.2s; }
+.race-lights.running span:nth-child(4) { animation-delay:.3s; }
+.race-lights.running span:nth-child(5) { animation-delay:.4s; }
+@keyframes light-up { 0%,100% { background:#4a1414; transform:scale(1); } 50% { background:#ff2020; transform:scale(1.1); } }
+.rating-star { border:0; background:transparent; color:var(--muted); font-size:40px; line-height:1; }
+.rating-star.selected { color:var(--accent); }
+.form-label { font-weight:600; }
+.form-control,.form-select { background-color:var(--panel); color:var(--ink); border-color:var(--line); padding:.65rem .8rem; }
+.form-control:focus,.form-select:focus { background:var(--panel); color:var(--ink); border-color:var(--accent); box-shadow:0 0 0 .2rem #bd103022; }
+.form-error { display:block; min-height:1.4em; color:var(--accent); font-size:.88rem; margin-top:4px; }
+[aria-invalid="true"] { border-color:var(--accent); }
+.notice { border-left:4px solid var(--accent); padding:12px 18px; background:var(--panel); }
+.faq-question { width:100%; padding:16px 0; border:0; border-bottom:1px solid var(--line); background:transparent; color:var(--ink); text-align:left; font-weight:650; }
+.faq-question::after { content:' +'; color:var(--accent); }
+.faq-question[aria-expanded="true"]::after { content:' -'; }
+.faq-answer p { margin:14px 0; }
+.profile-details { display:grid; grid-template-columns:180px 1fr; gap:12px; margin:24px 0; }
+.profile-details dd { margin:0; overflow-wrap:anywhere; }
+.account-photo,.about-photo { width:100%; height:340px; object-fit:cover; }
+.copy-panel { background:var(--panel); border-color:var(--line); border-radius:10px; }
+.driver-card mark { background:#ffe096; color:#242424; }
+.race-stats { border-radius:10px; }
+.dropdown-menu { max-height:260px; overflow:auto; }
+#race-toast { max-width:calc(100vw - 32px); }
+.table-responsive { border-radius:8px; }
+#standings-table .table { min-width:560px; }
+.site-footer { background:#111318; color:#c7cbd2; padding:36px 24px 20px; margin-top:24px; }
+.footer-inner { max-width:1132px; margin:auto; display:flex; justify-content:space-between; gap:24px; }
+.footer-inner p { font-size:.9rem; margin-top:10px; }
+.footer-links { display:flex; flex-wrap:wrap; gap:22px; align-items:start; }
+.site-footer a { color:#fff; }
+.site-footer a:hover { color:#ff92a4; }
+.team-credit { max-width:1132px; margin:20px auto 0; border-top:1px solid #393d46; padding-top:16px; font-size:.8rem; }
+@media (max-width:1199px) { .nav-actions { margin:12px 0 8px; } }
+@media (max-width:767px) { .team-cards { grid-template-columns:1fr; } .hero img { height:250px; } .featured-photo { height:280px; } .gallery-thumb img { height:65px; } .footer-inner { flex-direction:column; } .profile-details { grid-template-columns:1fr; gap:4px; } .profile-details dd { margin-bottom:12px; } .nav-container { padding:8px 16px; } }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none !important; transition:none !important; scroll-behavior:auto !important; } }

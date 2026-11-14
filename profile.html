@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="F1 Racing: a fan guide to drivers, teams, race weekends and championship standings." name="description"/>
+  <title>
+   My profile | F1 Racing
+  </title>
+  <link href="images/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <script src="js/theme.js">
+  </script>
+  <link href="vendor/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/paddock.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to content
+  </a>
+  <div aria-hidden="true" id="scroll-progress">
+  </div>
+  <header class="site-header">
+   <nav aria-label="Main navigation" class="navbar navbar-expand-xl" data-bs-theme="dark">
+    <div class="container-fluid nav-container">
+     <a class="navbar-brand" href="index.html">
+      <span aria-hidden="true" class="brand-mark">
+       //
+      </span>
+      F1 RACING
+     </a>
+     <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav main-nav ms-auto">
+       <li class="nav-item">
+        <a class="nav-link" href="index.html">
+         Home
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="teams.html">
+         Teams
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="gallery.html">
+         Gallery
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="race-centre.html">
+         Race centre
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="fan-zone.html">
+         Fan zone
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="contact.html">
+         Contact
+        </a>
+       </li>
+      </ul>
+      <div class="nav-actions">
+       <a class="btn btn-danger btn-sm" href="account.html" id="account-link">
+        Join / Log in
+       </a>
+       <button aria-pressed="false" class="btn btn-outline-light btn-sm" id="theme-toggle" type="button">
+        Dark mode
+       </button>
+      </div>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <p class="alert alert-warning m-3" hidden="" id="storage-message" role="status">
+   Browser storage is unavailable. Your choices cannot be saved until storage is allowed.
+  </p>
+  <main class="site-main py-4 py-lg-5 px-3 px-lg-4" id="main-content">
+   <section class="hero p-4 p-lg-5 mb-4">
+    <p class="eyebrow">
+     My paddock pass
+    </p>
+    <h1>
+     Your fan profile.
+    </h1>
+    <p class="lead mb-0">
+     Your details and favourite team, saved in this browser.
+    </p>
+   </section>
+   <div hidden="" id="profile-content">
+    <section class="card">
+     <div class="card-body p-4">
+      <p class="eyebrow">
+       Welcome back
+      </p>
+      <h2 id="profile-name">
+      </h2>
+      <dl class="profile-details">
+       <dt>
+        Email
+       </dt>
+       <dd id="profile-email">
+       </dd>
+       <dt>
+        Phone
+       </dt>
+       <dd id="profile-phone">
+       </dd>
+       <dt>
+        Favourite team
+       </dt>
+       <dd id="profile-team">
+       </dd>
+       <dt>
+        Last driver search
+       </dt>
+       <dd id="profile-search">
+       </dd>
+      </dl>
+      <div class="d-flex gap-2 flex-wrap">
+       <a class="btn btn-danger" href="race-centre.html">
+        Explore standings
+       </a>
+       <a class="btn btn-outline-dark" href="index.html#drivers">
+        Find a driver
+       </a>
+       <button class="btn btn-outline-danger" id="logout" type="button">
+        Log out
+       </button>
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <footer class="site-footer">
+   <div class="footer-inner">
+    <div>
+     <a class="footer-brand" href="index.html">
+      F1 RACING
+     </a>
+     <p>
+      For fans. From the grid to the chequered flag.
+     </p>
+    </div>
+    <div class="footer-links">
+     <a href="about.html">
+      About our team
+     </a>
+     <a href="contact.html">
+      Contact &amp; FAQ
+     </a>
+     <a href="https://github.com/Gdlllm/Assignment3WEB">
+      Source code
+     </a>
+    </div>
+   </div>
+   <p class="team-credit">
+    F1 drivers · Dinmukhamed Tamdybek &amp; Asylzhan Abdukadirov · SE-2512
+    <br/>
+    Independent student fan project. Not affiliated with Formula 1.
+   </p>
+  </footer>
+  <script src="vendor/jquery-4.0.0.min.js">
+  </script>
+  <script src="vendor/bootstrap.bundle.min.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+  <script src="js/script.js">
+  </script>
+  <script src="js/profile.js">
+  </script>
+ </body>
+</html>
