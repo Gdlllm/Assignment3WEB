@@ -32,7 +32,7 @@ Home, Teams, Gallery, Race centre, Fan zone, Contact, About, Account, Profile, M
 | JavaScript validation | Every form has `novalidate`; inline errors for required fields, email, phone and password rules where applicable |
 | Search | Live driver filtering, suggestions, highlighted matches and saved search |
 | UI effects | Button transitions, driver-card hover, race lights, counters and toast |
-| External API | Jolpica F1 driver standings with season selection, loading state, timeout and retry |
+| External API | Jolpica F1 standings, automatic OpenF1 backup, labelled saved results, season selection, loading state, timeouts and retry |
 | Theme relevance | Driver profiles, teams, race weekends, standings and fan activities |
 | Code organization | Shared CSS and small JavaScript files grouped by responsibility |
 
@@ -55,7 +55,11 @@ Accounts are a teaching simulation, not real secure authentication. Data belongs
 
 Contact saves a draft locally and does not send mail. Theme, search and selected archived season are also saved locally. Private browsing or blocked storage may prevent saving; the site displays a message in that case.
 
-Standings are fetched from `https://api.jolpi.ca/ergast/f1/{season}/driverstandings/`. The seasons are explicitly labelled as archives. Internet access and API availability are required for fresh data. See the [official API documentation](https://github.com/jolpica/jolpica-f1/blob/main/docs/README.md). An error is shown instead of invented results if the request fails.
+Standings are fetched from `https://api.jolpi.ca/ergast/f1/{season}/driverstandings/`. If it fails or times out after 12 seconds, the page tries `https://api.openf1.org/v1/championship_drivers?session_key=...`. See the [Jolpica documentation](https://github.com/jolpica/jolpica-f1/blob/main/docs/README.md) and [OpenF1 documentation](https://openf1.org/docs/). OpenF1 supplies positions and points; its endpoint does not include wins, so these cells show a dash with an explanation.
+
+`data/driver-rosters.json` maps driver numbers to names and teams for the two archived seasons. It was collected from OpenF1 race-session driver records on 19 November 2026. The session IDs identify the final races: 9662 for 2024 and 9839 for 2025. The file contains no championship positions or points; those still come from the external API.
+
+Successful standings are saved separately for each season in localStorage. If both APIs fail, a previous successful result is shown with its source and save time. Without saved results, the page shows an error and offers Refresh. Saved data is never described as a newly downloaded response. The seasons are explicitly labelled as archives, and fresh data requires internet access and an available API.
 
 ## Suggested presentation sequence
 
